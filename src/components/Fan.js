@@ -17,6 +17,7 @@ export const Fan = ({ value }) => {
         toValue: value,
         duration: 1000,
         useNativeDriver: true,
+        easing: (value) => Math.sin(value * Math.PI),
       })
     ).start();
   }, [value]); // Depend on value to restart animation with new duration

@@ -13,6 +13,7 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 import { Feather } from "@expo/vector-icons";
+import { writeData } from "../utils/WriteData";
 
 export const InputButton = ({ value, setValue }) => {
   const [on,setOn] = useState(false);
@@ -26,6 +27,11 @@ export const InputButton = ({ value, setValue }) => {
       setValue(0)
     }
   },[on])
+  useEffect(()=>{
+    const led1State = led1 ? 1 : 0;
+    const led2State = led2 ? 1 : 0;
+    writeData({speed:value,led1:led1State,led2:led2State})
+  },[value,led1,led2])
   return (
     <View style={styles.container}>
       <View style={styles.childCon}>

@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "HomeSync",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
@@ -11,9 +11,11 @@
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
     "@react-native-community/slider": "^4.5.2",
+    "@react-native-firebase/app": "^20.3.0",
     "expo": "~51.0.21",
     "expo-font": "^12.0.9",
     "expo-status-bar": "~1.12.1",
+    "firebase": "^10.12.4",
     "react": "18.2.0",
     "react-native": "0.74.3",
     "react-native-responsive-dimensions": "^3.1.1"

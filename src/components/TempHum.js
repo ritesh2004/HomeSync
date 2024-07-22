@@ -15,19 +15,19 @@ export const TempHum = () => {
     onValue(starcountRef, (snapshot) => {
       const data = snapshot.val();
       console.log(data);
-      setTemp(data?.temp);
-      setHum(data?.hum);
+      setTemp(data?.test?.temp);
+      setHum(data?.test?.hum);
     });
   });
   return (
     <View style={styles.parentcontainer}>
       <View style={styles.childcontainer}>
         <Text style={styles.heading}>Humidity</Text>
-        <Text style={styles.text}>{hum}</Text>
+        <Text style={styles.text}>{hum?hum:"*"}</Text>
       </View>
       <View style={styles.childcontainer}>
         <Text style={styles.heading}>Temperature</Text>
-        <Text style={styles.text}>{temp}°C</Text>
+        <Text style={styles.text}>{temp?temp:"*"}°C</Text>
       </View>
     </View>
   );

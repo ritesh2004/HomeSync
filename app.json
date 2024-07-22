@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "HomeSync",
-    "slug": "HomeSync",
+    "slug": "homesync",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,16 +12,30 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "."
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dev_ritesh29.homesync"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "20c89b25-f2d1-419e-9cb0-824d652bdcb9"
+      }
+    },
+    "owner": "dev_ritesh29",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/20c89b25-f2d1-419e-9cb0-824d652bdcb9"
     }
   }
 }
